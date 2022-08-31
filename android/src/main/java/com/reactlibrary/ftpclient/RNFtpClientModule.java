@@ -67,6 +67,17 @@ public class RNFtpClientModule extends ReactContextBaseJavaModule {
     this.reactContext = reactContext;
   }
 
+  // Required for rn built in EventEmitter Calls.
+  @ReactMethod
+  public void addListener(String eventName) {
+
+  }
+
+  @ReactMethod
+  public void removeListeners(Integer count) {
+
+  }
+
   @ReactMethod
   public void setup(String ip_address, int port, String username, String password){
     this.ip_address = ip_address;
